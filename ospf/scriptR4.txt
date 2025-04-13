@@ -1,0 +1,23 @@
+enable
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 4.4.4.4
+ex
+
+interface GigabitEthernet 0/0/0
+ipv6 ospf 1 area 0
+
+exit
+
+interface serial 0/1/0
+ipv6 ospf 1 area 0
+
+exit
+
+interface serial 0/1/1
+
+ipv6 ospf 1 area 0
+
+exit
+
