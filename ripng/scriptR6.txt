@@ -1,5 +1,6 @@
 enable
 configure terminal
+ipv6 unicast-routing
 ipv6 router rip RIPng 
 ex
 
