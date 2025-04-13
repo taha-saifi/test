@@ -1,0 +1,51 @@
+enable
+configure terminal
+hostname R0
+ipv6 unicast routing
+ipv6 router rip RIPng 
+ex
+
+interface serial 0/2/0
+ipv6 address 2001:DB8:ACAD:4::1/64
+ipv6 address FE80::4 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+
+interface serial 0/2/1
+ipv6 address 2001:DB8:ACAD:5::1/64
+ipv6 address FE80::5 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+
+interface GigabitEthernet 0/0/0
+ipv6 address 2001:DB8:ACAD:6::1/64
+ipv6 address FE80::6 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+
+interface serial 0/1/0
+ipv6 address 2001:DB8:ACAD:7::1/64
+ipv6 address FE80::7 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+
+interface serial 0/1/1
+ipv6 address 2001:DB8:ACAD:8::1/64
+ipv6 address FE80::8 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+
+interface GigabitEthernet 0/0/1
+ipv6 address 2001:DB8:ACAD:9::1/64
+ipv6 address FE80::9 link-local
+ipv6 rip RIPng enable
+no shutdown
+exit
+exit
+wr
+
