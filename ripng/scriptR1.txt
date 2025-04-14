@@ -5,16 +5,19 @@ ipv6 router rip RIPng
 ex
 
 interface GigabitEthernet 0/0/0
+no ipv6 address FE80::1 link-local
 ipv6 rip RIPng enable
 
 exit
 
 interface serial 0/1/0
+no ipv6 address FE80::4 link-local
 ipv6 rip RIPng enable
 
 exit
 
 interface serial 0/1/1
+ipv6 address FE80::A link-local
 ipv6 rip RIPng enable
 
 exit
