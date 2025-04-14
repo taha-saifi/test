@@ -2,50 +2,48 @@ enable
 configure terminal
 hostname R0
 ipv6 unicast-routing
-ipv6 router ospf 1
-router-id 1.1.1.1
-exit 
+ipv6 router rip RIPng 
 ex
 
 interface serial 0/2/0
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:4::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
 interface serial 0/2/1
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:5::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
 interface GigabitEthernet 0/0/0
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:6::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
 interface serial 0/1/0
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:7::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
 interface serial 0/1/1
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:8::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
 interface GigabitEthernet 0/0/1
 ipv6 enable
 ipv6 address 2002:DB8:ACAD:9::1/64
-ipv6 ospf 1 area 0 
+ipv6 rip RIPng enable 
 no shutdown
 exit
 
