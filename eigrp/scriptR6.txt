@@ -3,26 +3,27 @@ configure terminal
 hostname R6
 ipv6 unicast-routing
 ipv6 router eigrp 1000
-eigrp router-id 1.1.1.1
+eigrp router-id 7.7.7.7
+no shutdown
 ex
 
 interface GigabitEthernet 0/0/1
 ipv6 enable
-ipv6 address 2002:DB8:ACAD:3::2/64
+ipv6 address 2005:DB8:ACAD:3::2/64
 ipv6 eigrp 1000
 no shutdown
 exit
 
 interface GigabitEthernet 0/0/0
 ipv6 enable
-ipv6 address 2002:DB8:ACAD:9::2/64
+ipv6 address 2005:DB8:ACAD:9::2/64
 ipv6 eigrp 1000
 no shutdown
 exit
 
 interface serial 0/1/0
 ipv6 enable
-ipv6 address 2002:DB8:ACAD:A::2/64
+ipv6 address 2005:DB8:ACAD:A::2/64
 ipv6 eigrp 1000
 no shutdown
 exit

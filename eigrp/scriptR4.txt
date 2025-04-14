@@ -3,7 +3,8 @@ configure terminal
 hostname R4
 ipv6 unicast-routing
 ipv6 router eigrp 1000
-eigrp router-id 1.1.1.1
+eigrp router-id 5.5.5.5
+no shutdown
 ex
 
 interface GigabitEthernet 0/0/0
